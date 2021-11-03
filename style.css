@@ -1,0 +1,51 @@
+#Main {
+  width: 500px;
+  padding-top: 330px;
+  margin: auto;
+}
+
+#Main-Context {
+  text-align: center;
+  color: #e4d4d4;
+}
+
+#github-button {
+  width: 100px;
+  margin: auto;
+  display: block;
+  background-color: #3979b9;
+  border-radius: 10px;
+  border: solid 2px #3979b9;
+  color: #e4d4d4;
+}
+
+body {
+  background-color: #3979b9;
+}
+
+#github-img {
+  display: block;
+  width: 50px;
+  margin: 0px auto;
+}
+
+#Lang {
+  padding-top: 500px;
+  padding-bottom: 30px;
+}
+
+#Lang-h2 {
+  text-align: center;
+  color: #e4d4d4;
+}
+
+#Lang-list {
+  display: block;
+  margin: auto;
+}
+
+li {
+  text-align: center;
+  color: #e4d4d4;
+  font-size: 20px;
+}
