@@ -1,6 +1,6 @@
 #Main {
-  width: 500px;
-  padding-top: 330px;
+  width: 30%;
+  padding-top: 20.5%;
   margin: auto;
 }
 
@@ -10,11 +10,10 @@
 }
 
 #github-button {
-  width: 100px;
+  /* width: 20%; */
   margin: auto;
   display: block;
   background-color: #3979b9;
-  border-radius: 10px;
   border: solid 2px #3979b9;
   color: #e4d4d4;
 }
@@ -25,13 +24,13 @@ body {
 
 #github-img {
   display: block;
-  width: 50px;
+  width: 10.2%;
   margin: 0px auto;
 }
 
 #Lang {
-  padding-top: 500px;
-  padding-bottom: 30px;
+  padding-top: 30%;
+  padding-bottom: 20px;
 }
 
 #Lang-h2 {
@@ -47,5 +46,5 @@ body {
 li {
   text-align: center;
   color: #e4d4d4;
-  font-size: 20px;
+  font-size: 120%;
 }
