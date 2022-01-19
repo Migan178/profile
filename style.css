@@ -6,20 +6,20 @@
 
 #Main-Context {
   text-align: center;
-  color: #e4d4d4;
+  color: white;
 }
 
 #github-button {
   /* width: 20%; */
   margin: auto;
   display: block;
-  background-color: #2375c7;
-  border: solid 2px #2375c7;
-  color: #e4d4d4;
+  background-color: black;
+  border: solid 2px black;
+  color: white;
 }
 
 body {
-  background-color: #2375c7;
+  background-color: black;
 }
 
 #github-img {
@@ -35,7 +35,7 @@ body {
 
 #Lang-h2 {
   text-align: center;
-  color: #e4d4d4;
+  color: white;
 }
 
 #Lang-list {
@@ -45,6 +45,6 @@ body {
 
 li {
   text-align: center;
-  color: #e4d4d4;
+  color: white;
   font-size: 120%;
 }
