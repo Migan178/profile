@@ -1,5 +1,5 @@
 {
-  "name": "@migan/website",
+  "name": "my-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,12 +18,10 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.2",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
-    "postcss": "^8",
     "prettier": "^3.0.3",
     "typescript": "^5"
   }
