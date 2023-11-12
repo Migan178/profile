@@ -1,0 +1,30 @@
+.languages {
+  margin-left: 25%;
+}
+
+.languages h1 {
+  font-size: 50px;
+}
+
+.languages_items {
+  list-style: none;
+  padding-inline-start: 25%;
+}
+
+.about {
+  display: flex;
+}
+
+.devOps {
+  margin-left: 25%;
+  text-align: center;
+}
+
+.devOps h1 {
+  font-size: 50px;
+}
+
+.devOps_items {
+  list-style: none;
+  padding-inline-start: 0;
+}
