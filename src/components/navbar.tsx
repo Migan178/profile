@@ -20,10 +20,13 @@ export default function Navbar() {
         <li>
           <Link href={'/about'}>정보</Link>
         </li>
+        <li>
+          <Link href={'/projects'}>프로젝트들</Link>
+        </li>
       </ul>
       <ul className={'navbar_icon'}>
         <li>
-          <a href={'https://github.com/Migan178'} target={'_blank'}>
+          <Link href={'https://github.com/Migan178'} target={'_blank'}>
             <Image
               className={'github_logo'}
               src={githubLogo}
@@ -31,7 +34,7 @@ export default function Navbar() {
               width={20}
               height={20}
             />
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
