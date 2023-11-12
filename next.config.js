@@ -7,6 +7,7 @@ const nextConfig = {
         hostname: 'img.shields.io',
       },
     ],
+    unoptimized: true,
   },
   reactStrictMode: true,
 }
