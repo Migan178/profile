@@ -21,7 +21,7 @@ export default function Navbar() {
           <Link href={'/about'}>정보</Link>
         </li>
         <li>
-          <Link href={'/projects'}>프로젝트들</Link>
+          <Link href={'/projects'}>프로젝트</Link>
         </li>
       </ul>
       <ul className={'navbar_icon'}>
