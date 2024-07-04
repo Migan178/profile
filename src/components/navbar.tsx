@@ -6,13 +6,15 @@ import githubLogo from '/public/github_logo.png'
 export default function Navbar() {
   return (
     <nav className={'navbar'}>
-      <Image
-        className={'navbar_photo'}
-        src={myProfile}
-        alt={'My profile photo'}
-        width={50}
-        height={50}
-      />
+      <Link href={'/yourGirlfriend'}>
+        <Image
+          className={'navbar_photo'}
+          src={myProfile}
+          alt={'My profile photo'}
+          width={50}
+          height={50}
+        />
+      </Link>
       <ul className={'navbar_item'}>
         <li>
           <Link href={'/'}>홈</Link>
