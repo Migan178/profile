@@ -29,4 +29,10 @@
     padding: 8px 30px;
     font-size: 20px;
   }
+
+  @media (max-width: 748px) {
+    .main_text {
+      margin-top: 75%;
+    }
+  }
 </style>

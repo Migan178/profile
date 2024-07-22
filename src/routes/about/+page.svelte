@@ -82,21 +82,18 @@
 </main>
 
 <style>
-  .languages {
-    margin-left: 25%;
-  }
-
   .languages h1 {
     font-size: 50px;
   }
 
   .languages_items {
     list-style: none;
-    padding-inline-start: 25%;
+    margin-left: 6%;
   }
 
   .about {
     display: flex;
+    justify-content: center;
   }
 
   .devOps {
@@ -111,5 +108,20 @@
   .devOps_items {
     list-style: none;
     padding-inline-start: 0;
+  }
+
+  @media (max-width: 748px) {
+    .about {
+      display: block;
+      justify-content: normal;
+    }
+
+    .languages {
+      margin-left: 20%;
+    }
+
+    .devOps {
+      margin-left: 0;
+    }
   }
 </style>

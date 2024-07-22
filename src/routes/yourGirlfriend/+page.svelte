@@ -10,7 +10,8 @@
 
 <main>
   <div class="main">
-    <h1>이 웹사이트의 남친이 되어보세요! 확률은 2의 53승분의 1입니다.</h1>
+    <h1>이 웹사이트의 남친이 되어보세요!</h1>
+    <h2>확률은 2의 53승분의 1입니다.</h2>
     <button class="button" on:click={returnYesOrNo}>
       내가 너의 남친이니?
     </button>
@@ -31,5 +32,11 @@
     width: 150px;
     height: 30px;
     font-size: 16px;
+  }
+
+  @media (max-width: 748px) {
+    .main {
+      margin-top: 75%;
+    }
   }
 </style>

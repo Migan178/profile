@@ -9,7 +9,7 @@
   <div class="doremi">
     <div class="doremi_wrap">
       <a href="https://github.com/Migan-Studio/Doremi" target="_blank">
-        <img src={doremiPhoto} alt="Doremi" width="640" height="320" />
+        <img src={doremiPhoto} alt="Doremi" />
         <span class="project_move">{projectMove}</span>
       </a>
     </div>
@@ -18,7 +18,7 @@
   <div class="discommand">
     <div class="discommand_wrap">
       <a href="https://github.com/discommand/discommand" target="_blank">
-        <img src={discommandPhoto} alt="discommand" width="640" height="320" />
+        <img src={discommandPhoto} alt="discommand" />
         <span class="project_move">{projectMove}</span>
       </a>
     </div>
@@ -62,6 +62,9 @@
   }
 
   .discommand_wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 20px;
     transition: 0.5s;
   }
@@ -89,5 +92,34 @@
   .doremi_wrap:hover .project_move {
     transition: 0.5s;
     opacity: 1;
+  }
+
+  @media (max-width: 748px) {
+    .doremi {
+      margin-top: 10%;
+    }
+
+    .discommand {
+      margin-top: 10%;
+    }
+
+    .discommand_wrap {
+      width: 320px;
+      height: 160px;
+    }
+
+    .doremi_wrap {
+      width: 320px;
+      height: 160px;
+      font-size: 12px;
+    }
+
+    .doremi p {
+      font-size: 16px;
+    }
+
+    .discommand p {
+      font-size: 16px;
+    }
   }
 </style>
