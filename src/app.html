@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       :root {
-        --text-color: #dedede;
+        --text-color: #ffffff;
       }
 
       body {
         font-family: 'Pretendard', sans-serif;
-        background-color: #383838;
+        background-color: #000000;
+        height: 100%;
+        width: 100%;
         margin: 0;
+        border: 0;
+        padding: 0;
+        overflow: hidden;
       }
 
       a {
@@ -28,6 +33,7 @@
 
       h1 {
         color: var(--text-color);
+        margin: 0;
       }
 
       h2 {
@@ -59,6 +65,6 @@
     %sveltekit.head%
   </head>
   <body data-sveltekit-preload-data="hover">
-    <div style="display: contents">%sveltekit.body%</div>
+    <div style="display: contents; height: 100%">%sveltekit.body%</div>
   </body>
 </html>

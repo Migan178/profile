@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
   import hamburgerBar from '$lib/images/hamburger.png'
   import githubLogo from '$lib/images/github_logo.png'
   import myProfile from '$lib/images/myprofile.png'
@@ -14,13 +14,13 @@
 
     clicked = !clicked
   }
-</script>
+</script> -->
 
 <head>
   <title>Migan</title>
 </head>
 
-<div style="background-color: #242424;">
+<!-- <div style="background-color: #242424;">
   <nav class="navbar">
     <a href="/yourGirlfriend">
       <img class="navbar_photo" src={myProfile} alt="My profile" width="50" />
@@ -79,11 +79,11 @@
       </li>
     </ul>
   </div>
-</div>
+</div> -->
 
 <slot />
 
-<style>
+<!-- <style>
   .navbar {
     background-color: #242424;
     display: flex;
@@ -149,4 +149,4 @@
       display: none;
     }
   }
-</style>
+</style> -->
