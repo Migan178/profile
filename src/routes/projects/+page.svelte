@@ -94,6 +94,11 @@
     opacity: 1;
   }
 
+  .discommand_wrap:hover .project_move {
+    transition: 0.5s;
+    opacity: 1;
+  }
+
   @media (max-width: 748px) {
     .doremi {
       margin-top: 10%;
@@ -111,7 +116,6 @@
     .doremi_wrap {
       width: 320px;
       height: 160px;
-      font-size: 12px;
     }
 
     .doremi p {
@@ -120,6 +124,10 @@
 
     .discommand p {
       font-size: 16px;
+    }
+
+    .project_move {
+      top: 40%;
     }
   }
 </style>
