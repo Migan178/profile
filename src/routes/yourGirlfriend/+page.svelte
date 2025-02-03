@@ -9,34 +9,14 @@
 </script>
 
 <main>
-  <div class="main">
+  <div class="mt-75 text-center">
     <h1>이 웹사이트의 남친이 되어보세요!</h1>
     <h2>확률은 2의 53승분의 1입니다.</h2>
-    <button class="button" on:click={returnYesOrNo}>
+    <button
+      class="rounded-xl bg-[#303030] border-2 border-solid border-(--bg-color) w-40 h-8 text-white"
+      on:click={returnYesOrNo}
+    >
       내가 너의 남친이니?
     </button>
   </div>
 </main>
-
-<style>
-  .main {
-    margin-top: 15%;
-    text-align: center;
-  }
-
-  .button {
-    border-radius: 10px;
-    background-color: #303030;
-    color: white;
-    border: 2.5px solid #242424;
-    width: 150px;
-    height: 30px;
-    font-size: 16px;
-  }
-
-  @media (max-width: 748px) {
-    .main {
-      margin-top: 75%;
-    }
-  }
-</style>

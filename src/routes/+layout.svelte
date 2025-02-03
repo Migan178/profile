@@ -2,14 +2,19 @@
   import hamburgerBar from '$lib/images/hamburger.png'
   import githubLogo from '$lib/images/github_logo.png'
   import myProfile from '$lib/images/myprofile.png'
+  import '../app.css'
 
   let clicked = false
 
   function onClick() {
+    const hamburgerOpen = document.getElementById(
+      'hamburger_open',
+    ) as HTMLDivElement
+
     if (clicked) {
-      document.getElementById('hamburger_open')!.style.display = 'none'
+      hamburgerOpen.style.display = 'none'
     } else {
-      document.getElementById('hamburger_open')!.style.display = 'block'
+      hamburgerOpen.style.display = 'block'
     }
 
     clicked = !clicked
@@ -20,54 +25,58 @@
   <title>Migan</title>
 </head>
 
-<div style="background-color: #242424;">
-  <nav class="navbar">
-    <a href="/yourGirlfriend">
-      <img class="navbar_photo" src={myProfile} alt="My profile" width="50" />
+<div class="bg-(--bg-color)">
+  <nav class="flex items-center px-2 py-3 justify-between">
+    <a href="/yourGirlfriend" class="md:block hidden">
+      <img src={myProfile} alt="My profile" width="50" />
     </a>
-    <ul class="navbar_item">
-      <li>
+    <a href="/" class="block md:hidden">
+      <img src={myProfile} alt="My profile" width="50" />
+    </a>
+    <ul class="md:flex list-none hidden">
+      <li class="px-8">
         <a href="/">홈</a>
       </li>
-      <li>
-        <a href="/about">정보</a>
-      </li>
-      <li>
+      <li class="px-8">
         <a href="/projects">프로젝트</a>
       </li>
     </ul>
-    <ul class="navbar_icon">
+    <ul class="md:flex list-none hidden pr-3">
       <li>
         <a href="https://github.com/Migan178" target="_blank">
           <img
             class="github_logo"
             src={githubLogo}
             alt="GitHub logo"
-            width="20"
+            width="22"
           />
         </a>
       </li>
     </ul>
-    <ul class="navbar_hamburger">
-      <button type="button" on:click={onClick}>
+    <ul class="md:hidden block pr-3">
+      <button
+        class="bg-(--bg-color) border-none"
+        type="button"
+        on:click={onClick}
+      >
         <img src={hamburgerBar} alt="Hamburger bar" width="40" />
       </button>
     </ul>
   </nav>
-  <div id="hamburger_open">
+  <div id="hamburger_open" class="pb-5 bg-(--bg-color)">
     <ul>
-      <li>
+      <li class="ml-10 list-none mb-7 text-3xl">
         <a href="/" on:click={onClick}>홈</a>
       </li>
-      <li>
+      <li class="ml-10 list-none mb-7 text-3xl">
         <a href="/about" on:click={onClick}>정보</a>
       </li>
-      <li>
+      <li class="ml-10 list-none mb-7 text-3xl">
         <a href="/projects" on:click={onClick}>프로젝트</a>
       </li>
     </ul>
     <ul>
-      <li>
+      <li class="ml-10">
         <a href="https://github.com/Migan178" target="_blank">
           <img
             class="github_logo"
@@ -84,69 +93,7 @@
 <slot />
 
 <style>
-  .navbar {
-    background-color: #242424;
-    display: flex;
-    align-items: center;
-    padding: 8px 12px;
-    justify-content: space-between;
-  }
-
-  .navbar_photo {
-    padding-left: 0;
-  }
-
-  .navbar_icon {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding-left: 0;
-    padding-right: 1%;
-  }
-
-  .navbar_item {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding-left: 0;
-  }
-
-  .navbar_item li {
-    padding: 8px 30px;
-  }
-
-  .navbar_hamburger {
-    display: none;
-  }
-
-  .navbar_hamburger button {
-    background: #242424;
-    border: none;
-  }
-
   #hamburger_open {
     display: none;
-    margin-top: 0;
-    background-color: #242424;
-  }
-
-  #hamburger_open li {
-    list-style-type: none;
-    margin-bottom: 25px;
-    font-size: 30px;
-  }
-
-  @media (max-width: 748px) {
-    .navbar_hamburger {
-      display: block;
-    }
-
-    .navbar_item {
-      display: none;
-    }
-
-    .navbar_icon {
-      display: none;
-    }
   }
 </style>
