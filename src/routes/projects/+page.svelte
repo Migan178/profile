@@ -6,7 +6,7 @@
 </script>
 
 <main>
-  <div class="mt-11 text-center relative">
+  <div class="mt-11 text-center relative z-10">
     <div
       class="group w-[320px] h-[160px] md:w-[640px] md:h-[320px] overflow-hidden m-auto"
     >

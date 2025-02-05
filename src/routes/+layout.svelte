@@ -11,10 +11,16 @@
       'hamburger_open',
     ) as HTMLDivElement
 
+    const nav = document.getElementById('nav') as HTMLDivElement
+
     if (clicked) {
-      hamburgerOpen.style.display = 'none'
+      hamburgerOpen.classList.remove('opacity-100')
+      hamburgerOpen.classList.add('opacity-0')
+      nav.classList.remove('rounded-b-none')
     } else {
-      hamburgerOpen.style.display = 'block'
+      hamburgerOpen.classList.remove('opacity-0')
+      hamburgerOpen.classList.add('opacity-100')
+      nav.classList.add('rounded-b-none')
     }
 
     clicked = !clicked
@@ -25,8 +31,11 @@
   <title>Migan</title>
 </head>
 
-<div class="bg-(--bg-color)">
-  <nav class="flex items-center px-2 py-3 justify-between">
+<div
+  class="bg-(--bg-color) shadow-xl shadow-black/30 m-4 rounded-3xl duration-500"
+  id="nav"
+>
+  <nav class="flex items-center px-8 py-3 justify-between">
     <a href="/yourGirlfriend" class="md:block hidden">
       <img src={myProfile} alt="My profile" width="50" />
     </a>
@@ -41,14 +50,14 @@
         <a href="/projects">프로젝트</a>
       </li>
     </ul>
-    <ul class="md:flex list-none hidden pr-3">
+    <ul class="md:flex list-none hidden pr-8">
       <li>
         <a href="https://github.com/Migan178" target="_blank">
           <img
             class="github_logo"
             src={githubLogo}
             alt="GitHub logo"
-            width="22"
+            width="28"
           />
         </a>
       </li>
@@ -63,13 +72,13 @@
       </button>
     </ul>
   </nav>
-  <div id="hamburger_open" class="pb-5 bg-(--bg-color)">
+  <div
+    id="hamburger_open"
+    class="pt-5 pb-5 bg-(--bg-color) rounded-b-3xl opacity-0 fixed duration-500 max-w-[100%] left-4 right-4 shadow-xl shadow-black/30 z-20"
+  >
     <ul>
       <li class="ml-10 list-none mb-7 text-3xl">
         <a href="/" on:click={onClick}>홈</a>
-      </li>
-      <li class="ml-10 list-none mb-7 text-3xl">
-        <a href="/about" on:click={onClick}>정보</a>
       </li>
       <li class="ml-10 list-none mb-7 text-3xl">
         <a href="/projects" on:click={onClick}>프로젝트</a>
@@ -91,9 +100,3 @@
 </div>
 
 <slot />
-
-<style>
-  #hamburger_open {
-    display: none;
-  }
-</style>

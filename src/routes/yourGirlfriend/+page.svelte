@@ -9,11 +9,11 @@
 </script>
 
 <main>
-  <div class="mt-75 text-center">
+  <div class="mt-50 text-center">
     <h1>이 웹사이트의 남친이 되어보세요!</h1>
     <h2>확률은 2의 53승분의 1입니다.</h2>
     <button
-      class="rounded-xl bg-[#303030] border-2 border-solid border-(--bg-color) w-40 h-8 text-white"
+      class="rounded-xl bg-(--bg-color) border-2 border-solid border-(--bg2-color) w-40 h-8 text-white"
       on:click={returnYesOrNo}
     >
       내가 너의 남친이니?
