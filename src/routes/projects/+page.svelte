@@ -1,6 +1,7 @@
 <script>
-  import doremiPhoto from '$lib/images/doremi.png'
+  // import doremiPhoto from '$lib/images/doremi.png'
   // import discommandPhoto from '$lib/images/discommand.png'
+  import preparingPhoto from '$lib/images/preparing.png'
 
   // const PROJECT_MOVE = '해당 프로젝트로 이동하기'
 </script>
@@ -13,7 +14,7 @@
       <!-- <a href="https://github.com/Migan-Studio/Doremi" target="_blank"> -->
       <!-- 사진 변경 예정 -->
       <img
-        src={doremiPhoto}
+        src={preparingPhoto}
         alt="Carbonium (Preparing)/카보늄 (준비 중)"
         class="w-[100%] h-[100%] object-cover rounded-3xl duration-350 group-hover:brightness-50"
       />
