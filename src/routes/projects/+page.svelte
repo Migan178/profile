@@ -18,7 +18,7 @@
         class="w-[100%] h-[100%] object-cover rounded-3xl duration-350 group-hover:brightness-50"
       />
       <span
-        class="text-(--text-color) top-[49%] left-[46%] opacity-0 absolute duration-350 group-hover:opacity-100"
+        class="text-(--text-color) top-[50%] left-[50%] translate-[-50%] opacity-0 absolute duration-350 group-hover:opacity-100"
         >공개 예정</span
       >
       <!-- </a> -->
