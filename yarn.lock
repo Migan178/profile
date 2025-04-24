@@ -213,10 +213,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@migan/prettier-config@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@migan/prettier-config/-/prettier-config-1.0.0.tgz#1a558c433f0d69b8edb446fd94d264c87c212110"
-  integrity sha512-nYpgIVXdtdDJ7KEmSIE826E9TGNlcKgH1CcK0QgV13hoqrP9Qjq5v/JFK+TSHQtcplXAUDeMm+HRSOZTbXuApQ==
+"@migan/prettier-config@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@migan/prettier-config/-/prettier-config-2.0.0.tgz#f2826d39a7ea71c679ccdb3fafe4b64a749a3d97"
+  integrity sha512-bezWe+P/VRVLg6y6pW/WIgKNGy/AVTNXBBmYuREwZ9MMkRBIjHYSgsnaFPZk9NlYdOY+Ds0rnDMp7Hin2bo4og==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
