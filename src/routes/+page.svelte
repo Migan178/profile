@@ -1,33 +1,76 @@
 <script lang="ts">
 	import myProfileBg from "$lib/images/myprofile-bg.png";
 
-	let qwer: number;
+	let clicked = false;
+
+	let iLoveHebi: number;
 	const birth = new Date("2010-01-31T04:28:00+09:00").getTime();
-	qwer = Date.now() - birth;
+	iLoveHebi = Date.now() - birth;
 	setInterval(() => {
-		qwer = Date.now() - birth;
+		iLoveHebi = Date.now() - birth;
 	});
+
+	function copyDiscord() {
+		const icon = document.getElementById("discord-button")!;
+		navigator.clipboard.writeText("migan.");
+		icon.classList.remove("bi-discord");
+		icon.classList.add("bi-check2");
+
+		setTimeout(() => {
+			icon.classList.remove("bi-check2");
+			icon.classList.add("bi-discord");
+		}, 2500);
+	}
+
+	function changeName() {
+		const name = document.getElementById("name") as HTMLHeadingElement;
+		if (clicked) {
+			name.innerText = "Migan";
+		} else {
+			name.innerText = "Siwoo Jeon";
+		}
+
+		clicked = !clicked;
+	}
 </script>
 
 <main>
 	<div class="text-center">
-		<img
-			src={myProfileBg}
-			alt="Migan's profile/미간의 프로필"
-			class="rounded-[50%] m-auto mt-50"
-			width="150"
-		/>
-		<h1 class="text-5xl">Migan</h1>
-		<h2 class="mt-3">태어난지 {new Intl.NumberFormat().format(qwer)}ms</h2>
+		<a href="/yourGirlfriend" class="hover:cursor-default">
+			<img
+				src={myProfileBg}
+				alt="Migan's profile/미간의 프로필"
+				class="rounded-[50%] m-auto mt-50 shadow-xl shadow-black/30"
+				width="150"
+			/>
+		</a>
+		<button on:click={changeName}>
+			<h1 class="text-5xl mt-1" id="name">Migan</h1>
+		</button>
+		<h2 class="mt-3">
+			태어난지 {new Intl.NumberFormat().format(iLoveHebi)}ms
+		</h2>
 	</div>
 	<ul class="list-none flex items-center justify-center">
-		<li class="px-7 py-8 text-xl">
-			<a href="https://github.com/Migan178" target="_blank"
-				>깃허브로 가기</a
-			>
-		</li>
-		<li class="px-7 py-8 text-xl">
-			<a href="/projects">프로젝트</a>
+		<li class="px-7 pt-1 text-2xl">
+			<a href="https://github.com/Migan178" target="_blank" class="mr-1">
+				<i class="bi bi-github"></i>
+			</a>
+			<a href="mailto:me@migan.co.kr" class="mr-1">
+				<i class="bi bi-envelope-at-fill"></i>
+			</a>
+			<button on:click={copyDiscord} class="hover:cursor-pointer mr-1">
+				<i
+					class="bi bi-discord text-(--text-color) hover:text-white duration-250"
+					id="discord-button"
+				></i>
+			</button>
+			<a href="https://x.com/Migan178" target="_blank" class="mr-1">
+				<i class="bi bi-twitter-x"></i>
+			</a>
+			<a href="https://www.instagram.com/migan.3meter" target="_blank">
+				<i class="bi bi-instagram"></i>
+			</a>
 		</li>
 	</ul>
 </main>

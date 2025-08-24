@@ -1,12 +1,11 @@
 <script lang="ts">
-	import hamburgerBar from "$lib/images/hamburger.png";
-	import githubLogo from "$lib/images/github_logo.png";
 	import myProfile from "$lib/images/myprofile.png";
+	import "bootstrap-icons/font/bootstrap-icons.css";
 	import "../app.css";
 
 	let clicked = false;
 
-	function onClick() {
+	function openOrCloseMenu() {
 		const hamburgerOpen = document.getElementById(
 			"hamburger_open",
 		) as HTMLDivElement;
@@ -25,6 +24,10 @@
 
 		clicked = !clicked;
 	}
+
+	function closeMenuByProfile() {
+		if (clicked) openOrCloseMenu();
+	}
 </script>
 
 <head>
@@ -36,10 +39,7 @@
 	id="nav"
 >
 	<nav class="flex items-center px-8 py-3 justify-between">
-		<a href="/yourGirlfriend" class="md:block hidden">
-			<img src={myProfile} alt="My profile" width="50" />
-		</a>
-		<a href="/" class="block md:hidden">
+		<a href="/" on:click={closeMenuByProfile}>
 			<img src={myProfile} alt="My profile" width="50" />
 		</a>
 		<ul class="md:flex list-none hidden">
@@ -50,25 +50,20 @@
 				<a href="/projects">프로젝트</a>
 			</li>
 		</ul>
-		<ul class="md:flex list-none hidden pr-8">
+		<ul class="md:flex list-none hidden pr-4">
 			<li>
 				<a href="https://github.com/Migan178" target="_blank">
-					<img
-						class="github_logo"
-						src={githubLogo}
-						alt="GitHub logo"
-						width="28"
-					/>
+					<i class="bi bi-github text-3xl"></i>
 				</a>
 			</li>
 		</ul>
-		<ul class="md:hidden block pr-3">
+		<ul class="md:hidden block">
 			<button
 				class="bg-(--bg-color) border-none"
 				type="button"
-				on:click={onClick}
+				on:click={openOrCloseMenu}
 			>
-				<img src={hamburgerBar} alt="Hamburger bar" width="40" />
+				<i class="bi bi-list text-5xl text-white"></i>
 			</button>
 		</ul>
 	</nav>
@@ -78,21 +73,16 @@
 	>
 		<ul>
 			<li class="ml-10 list-none mb-7 text-3xl">
-				<a href="/" on:click={onClick}>홈</a>
+				<a href="/" on:click={openOrCloseMenu}>홈</a>
 			</li>
 			<li class="ml-10 list-none mb-7 text-3xl">
-				<a href="/projects" on:click={onClick}>프로젝트</a>
+				<a href="/projects" on:click={openOrCloseMenu}>프로젝트</a>
 			</li>
 		</ul>
 		<ul>
 			<li class="ml-10">
 				<a href="https://github.com/Migan178" target="_blank">
-					<img
-						class="github_logo"
-						src={githubLogo}
-						alt="GitHub logo"
-						width="35"
-					/>
+					<i class="bi bi-github text-4xl"></i>
 				</a>
 			</li>
 		</ul>

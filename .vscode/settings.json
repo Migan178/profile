@@ -1,15 +1,15 @@
 {
-  "files.associations": {
-    "*.css": "tailwindcss"
-  },
-  "editor.quickSuggestions": {
-    "other": true,
-    "comments": false,
-    "strings": true,
-  },
-  "tailwindCSS.emmetCompletions": true,
-  "editor.inlineSuggest.enabled": true,
-  "tailwindCSS.includeLanguages": {
-  "svelte": "html",
-}
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	"editor.quickSuggestions": {
+		"other": true,
+		"comments": false,
+		"strings": true
+	},
+	"tailwindCSS.emmetCompletions": true,
+	"editor.inlineSuggest.enabled": true,
+	"tailwindCSS.includeLanguages": {
+		"svelte": "html"
+	}
 }
