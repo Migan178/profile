@@ -61,7 +61,7 @@
 			</a>
 			<button on:click={copyDiscord} class="hover:cursor-pointer mr-1">
 				<i
-					class="bi bi-discord text-(--text-color) hover:text-white duration-250"
+					class="bi bi-discord text-(--text-color) hover:text-(--hover-color) duration-250"
 					id="discord-button"
 				></i>
 			</button>

@@ -63,7 +63,7 @@
 				type="button"
 				on:click={openOrCloseMenu}
 			>
-				<i class="bi bi-list text-5xl text-white"></i>
+				<i class="bi bi-list text-5xl text-(--text-color)"></i>
 			</button>
 		</ul>
 	</nav>
