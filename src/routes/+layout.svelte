@@ -15,11 +15,36 @@
 		if (clicked) {
 			hamburgerOpen.classList.remove("opacity-100");
 			hamburgerOpen.classList.add("opacity-0");
-			nav.classList.remove("rounded-b-none");
+
+			for (let i = 52; i > 3; i--) {
+				if (i == 52) {
+					nav.classList.remove(`pb-52.5`);
+				}
+
+				nav.classList.remove(`pb-${i + 1}`);
+
+				if (i === 4) {
+					break;
+				}
+
+				nav.classList.add(`pb-${i}`);
+			}
 		} else {
+			for (let i = 4; i < 53; i++) {
+				if (i === 4) {
+					nav.classList.remove("pb-4");
+				}
+
+				nav.classList.remove(`pb-${i - 1}`);
+				if (i === 52) {
+					nav.classList.add("pb-52.5");
+				} else {
+					nav.classList.add(`pb-${i}`);
+				}
+			}
+
 			hamburgerOpen.classList.remove("opacity-0");
 			hamburgerOpen.classList.add("opacity-100");
-			nav.classList.add("rounded-b-none");
 		}
 
 		clicked = !clicked;
@@ -35,7 +60,7 @@
 </head>
 
 <div
-	class="bg-(--bg-color) shadow-xl shadow-black/30 m-4 rounded-3xl duration-500"
+	class="bg-(--bg-color) shadow-xl shadow-black/30 rounded-3xl duration-500 fixed left-4 right-4 bottom-4 z-20"
 	id="nav"
 >
 	<nav class="flex items-center px-8 py-3 justify-between">

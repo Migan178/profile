@@ -9,7 +9,7 @@
 </script>
 
 <main>
-	<div class="mt-50 text-center">
+	<div class="text-center">
 		<h1>이 웹사이트의 남친이 되어보세요!</h1>
 		<h2>확률은 2의 53승분의 1입니다.</h2>
 		<button

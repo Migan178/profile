@@ -28,7 +28,7 @@
 			머핀봇은 Migan이 만드는 내수용 봇이에요.
 		</p>
 	</div>
-	<div class="mt-11 text-center relative z-10 mb-10">
+	<div class="mt-11 text-center relative z-10 pb-25">
 		<div
 			class="group w-[320px] h-[160px] md:w-[640px] md:h-[320px] overflow-hidden m-auto"
 		>
