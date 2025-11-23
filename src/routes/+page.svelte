@@ -37,7 +37,7 @@
 <main>
 	<div>
 		<div class="text-center">
-			<a href="/yourGirlfriend" class="hover:cursor-default">
+			<a href="/yourLover" class="hover:cursor-default">
 				<img
 					src={myProfileBg}
 					alt="Migan's profile/미간의 프로필"
