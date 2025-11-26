@@ -1,14 +1,32 @@
 <script lang="ts">
 	import myProfileBg from "$lib/images/myprofile-bg.png";
+	import { onMount } from "svelte";
 
 	let clicked = false;
 
 	let iLoveHebi: number;
 	const birth = new Date("2010-01-31T04:28:00+09:00").getTime();
 	iLoveHebi = Date.now() - birth;
-	setInterval(() => {
-		iLoveHebi = Date.now() - birth;
+
+	onMount(() => {
+		const interval = setInterval(() => {
+			iLoveHebi = Date.now() - birth;
+		});
+
+		return () => clearInterval(interval);
 	});
+
+	onMount(() => {
+		const interval = setInterval(changeName, 6000);
+
+		return () => clearInterval(interval);
+	});
+
+	async function sleep(ms: number) {
+		return new Promise<void>(resolve => {
+			setTimeout(resolve, ms);
+		});
+	}
 
 	function copyDiscord() {
 		const icon = document.getElementById("discord-button")!;
@@ -22,12 +40,33 @@
 		}, 2500);
 	}
 
-	function changeName() {
-		const name = document.getElementById("name") as HTMLHeadingElement;
+	async function changeName() {
+		const nameElement = document.getElementById(
+			"name",
+		) as HTMLHeadingElement;
+		const nickname = "Migan";
+		const name = "전시우";
+
 		if (clicked) {
-			name.innerText = "Migan";
+			for (let i = name.length; i > 0; i--) {
+				nameElement.innerText = nameElement.innerText.slice(0, i);
+				await sleep(250);
+			}
+
+			for (let i = 0; i <= nickname.length - 1; i++) {
+				nameElement.innerText += nickname[i];
+				await sleep(250);
+			}
 		} else {
-			name.innerText = "Siwoo Jeon";
+			for (let i = nickname.length; i > 0; i--) {
+				nameElement.innerText = nameElement.innerText.slice(0, i);
+				await sleep(250);
+			}
+
+			for (let i = 0; i <= name.length - 1; i++) {
+				nameElement.innerText += name[i];
+				await sleep(250);
+			}
 		}
 
 		clicked = !clicked;
@@ -45,12 +84,20 @@
 					width="150"
 				/>
 			</a>
-			<button on:click={changeName}>
-				<h1 class="text-5xl mt-1" id="name">Migan</h1>
-			</button>
+			<h1 class="text-5xl mt-1" id="name">&#x200bMigan</h1>
 			<h2 class="mt-3">
 				태어난지 {new Intl.NumberFormat().format(iLoveHebi)}ms
 			</h2>
+			<div class="mt-3">
+				<h3>
+					저는 초등학교 4학년 때부터 개발에 관심이 생겨 디스코드
+					봇으로 개발을 시작한 Migan이라 해요!
+				</h3>
+				<h3>
+					지금은 디스코드 봇이나 웹사이트 등 여러 토이 프로젝트들을
+					하고 있어요!
+				</h3>
+			</div>
 		</div>
 		<ul class="list-none flex items-center justify-center">
 			<li class="px-7 pt-1 text-2xl">

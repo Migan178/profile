@@ -56,6 +56,11 @@
 		color: var(--text-color);
 	}
 
+	h3 {
+		font-size: var(--text-xl);
+		color: var(--text-color);
+	}
+
 	a {
 		text-decoration: none;
 		color: var(--text-color);
@@ -88,7 +93,11 @@
 		}
 
 		p {
-			font-size: var(text-lg);
+			font-size: var(--text-lg);
+		}
+
+		h3 {
+			font-size: var(--text-lg);
 		}
 	}
 }
