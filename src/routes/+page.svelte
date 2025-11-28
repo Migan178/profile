@@ -85,7 +85,7 @@
 				/>
 			</a>
 			<h1 class="text-5xl mt-1" id="name">&#x200bMigan</h1>
-			<h2 class="mt-3">
+			<h2 class="mt-3 tabular-nums">
 				태어난지 {new Intl.NumberFormat().format(iLoveHebi)}ms
 			</h2>
 			<div class="mt-3">
