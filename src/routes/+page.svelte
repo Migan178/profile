@@ -74,7 +74,7 @@
 </script>
 
 <main>
-	<div>
+	<div class="md:flex">
 		<div class="text-center">
 			<a href="/yourLover" class="hover:cursor-default">
 				<img
@@ -88,48 +88,53 @@
 			<h2 class="mt-3 tabular-nums">
 				태어난지 {new Intl.NumberFormat().format(iLoveHebi)}ms
 			</h2>
-			<div class="mt-3">
-				<h3>
-					저는 초등학교 4학년 때부터 개발에 관심이 생겨 디스코드
-					봇으로 개발을 시작한 Migan이라 해요!
-				</h3>
-				<h3>
-					지금은 디스코드 봇이나 웹사이트 등 여러 토이 프로젝트들을
-					하고 있어요!
-				</h3>
-			</div>
+			<ul class="list-none flex items-center justify-center">
+				<li class="px-7 pt-1 text-2xl">
+					<a
+						href="https://github.com/Migan178"
+						target="_blank"
+						class="mr-1"
+					>
+						<i class="bi bi-github"></i>
+					</a>
+					<a href="mailto:me@migan.co.kr" class="mr-1">
+						<i class="bi bi-envelope-at-fill"></i>
+					</a>
+					<button
+						on:click={copyDiscord}
+						class="hover:cursor-pointer mr-1"
+					>
+						<i
+							class="bi bi-discord text-(--text-color) hover:text-(--hover-color) duration-250"
+							id="discord-button"
+						></i>
+					</button>
+					<a
+						href="https://x.com/Migan178"
+						target="_blank"
+						class="mr-1"
+					>
+						<i class="bi bi-twitter-x"></i>
+					</a>
+					<a
+						href="https://www.instagram.com/migan.3meter"
+						target="_blank"
+					>
+						<i class="bi bi-instagram"></i>
+					</a>
+				</li>
+			</ul>
 		</div>
-		<ul class="list-none flex items-center justify-center">
-			<li class="px-7 pt-1 text-2xl">
-				<a
-					href="https://github.com/Migan178"
-					target="_blank"
-					class="mr-1"
-				>
-					<i class="bi bi-github"></i>
-				</a>
-				<a href="mailto:me@migan.co.kr" class="mr-1">
-					<i class="bi bi-envelope-at-fill"></i>
-				</a>
-				<button
-					on:click={copyDiscord}
-					class="hover:cursor-pointer mr-1"
-				>
-					<i
-						class="bi bi-discord text-(--text-color) hover:text-(--hover-color) duration-250"
-						id="discord-button"
-					></i>
-				</button>
-				<a href="https://x.com/Migan178" target="_blank" class="mr-1">
-					<i class="bi bi-twitter-x"></i>
-				</a>
-				<a
-					href="https://www.instagram.com/migan.3meter"
-					target="_blank"
-				>
-					<i class="bi bi-instagram"></i>
-				</a>
-			</li>
-		</ul>
+		<div class="mt-3 mx-5 text-xs md:text-lg">
+			<h3>
+				저는 초등학교 4학년 때부터 개발에 관심이 생겨 디스코드 봇으로
+				개발을 시작한 Migan이라 해요.
+			</h3>
+			<h3>현재는 웹과 디스코드 봇 등 여러 분야에 관심이 있어요.</h3>
+			<h3>
+				또한 디스코드 봇이나 웹사이트 등 여러 토이 프로젝트들을 하고
+				있어요.
+			</h3>
+		</div>
 	</div>
 </main>
