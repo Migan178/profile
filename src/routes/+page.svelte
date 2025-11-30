@@ -74,7 +74,7 @@
 </script>
 
 <main>
-	<div class="md:flex">
+	<div class="md:flex max-md:mt-10">
 		<div class="text-center">
 			<a href="/yourLover" class="hover:cursor-default">
 				<img
@@ -125,16 +125,33 @@
 				</li>
 			</ul>
 		</div>
-		<div class="mt-3 mx-5 text-xs md:text-lg">
-			<h3>
-				저는 초등학교 4학년 때부터 개발에 관심이 생겨 디스코드 봇으로
-				개발을 시작한 Migan이라 해요.
-			</h3>
-			<h3>현재는 웹과 디스코드 봇 등 여러 분야에 관심이 있어요.</h3>
-			<h3>
-				또한 디스코드 봇이나 웹사이트 등 여러 토이 프로젝트들을 하고
-				있어요.
-			</h3>
+		<div class="mt-3 mx-5 text-xs md:text-lg pb-25">
+			<div>
+				<h2>소개</h2>
+				<h3>
+					저는 초등학교 4학년 때부터 개발에 관심이 생겨 디스코드
+					봇으로 개발을 시작한 Migan이라 해요.
+				</h3>
+				<h3>
+					현재는 웹과 디스코드 봇 등 여러 분야에 관심이 있어요.
+					(나중에는 시스템도 다루고 싶어요.)
+				</h3>
+				<h3>
+					또한 디스코드 봇이나 웹사이트 등 여러 토이 프로젝트들을 하고
+					있어요.
+				</h3>
+				<h3>
+					현재 제가 다룰 수 있는 프로그래밍 언어는 Go, JavaScript,
+					TypeScript, Python이 있어요.
+				</h3>
+			</div>
+			<div class="mt-10">
+				<h2>그동안 해온 활동 (많이 초라 함.)</h2>
+				<h3>
+					2025. 09. 13. 선린인터넷고등학교 소프트웨어 나눔 축제 참가
+				</h3>
+				<h3>2020. 06. ??. 디스코드 봇으로 개발 입문</h3>
+			</div>
 		</div>
 	</div>
 </main>
