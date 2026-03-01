@@ -21,83 +21,64 @@
 
 	html,
 	body {
-		height: 100%;
+		@apply h-screen;
 	}
 
 	body {
-		font-size: 14px;
-		font-family: "Pretendard", sans-serif;
-		background-color: var(--bg2-color);
-		margin: 0;
-		display: flex;
-		flex-direction: column-reverse;
+		@apply bg-(--bg2-color) font-[Pretendard] text-[14px] flex flex-col;
 	}
 
 	main {
-		height: 100%;
-		display: grid;
-		justify-content: center;
-		align-items: center;
+		@apply h-screen grid justify-center items-center;
 	}
 
 	h1 {
-		font-size: var(--text-2xl);
-		color: var(--text-color);
-		font-weight: 700;
+		@apply text-2xl text-(--text-color) font-bold;
 	}
 
 	h2 {
-		font-size: var(--text-lg);
-		color: var(--text-color);
+		@apply text-lg text-(--text-color);
 	}
 
 	p {
-		font-size: var(--text-xl);
-		color: var(--text-color);
+		@apply text-xl text-(--text-color);
 	}
 
 	h3 {
-		font-size: var(--text-xl);
-		color: var(--text-color);
+		@apply text-xl text-(--text-color);
 	}
 
 	a {
-		text-decoration: none;
-		color: var(--text-color);
-		transition: 0.25s;
+		@apply text-(--text-color) duration-250;
 	}
 
 	a:hover {
-		color: var(--hover-color);
-		transition: 0.25s;
+		@apply text-(--hover-color) duration-250;
 	}
 
 	::-webkit-scrollbar {
-		background-color: var(--bg2-color);
+		@apply bg-(--bg2-color);
 	}
 
 	::-webkit-scrollbar-thumb {
-		background-color: var(--scroll-color);
-		border-radius: 10px;
-		background-clip: padding-box;
-		border: 4px solid transparent;
+		@apply bg-(--scroll-color) bg-clip-padding rounded-[10px] border-4 border-solid border-transparent;
 	}
 
 	@media (min-width: 768px) {
 		h1 {
-			font-size: var(--text-3xl);
+			@apply text-3xl;
 		}
 
 		h2 {
-			font-size: var(--text-2xl);
+			@apply text-2xl;
 		}
 
 		p {
-			font-size: var(--text-lg);
+			@apply text-lg;
 		}
 
 		h3 {
-			font-size: var(--text-lg);
+			@apply text-lg;
 		}
 	}
 }

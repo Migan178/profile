@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 /**
  * @see https://prettier.io/docs/en/configuration.html
  * @type {import("prettier").Config}
  */
-module.exports = {
+const config = {
 	...require("@migan/prettier-config"),
-	plugins: ["prettier-plugin-svelte"],
+	plugins: ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
 	overrides: [
 		{
 			files: "*.svelte",
@@ -14,3 +15,5 @@ module.exports = {
 		},
 	],
 };
+
+module.exports = config;
