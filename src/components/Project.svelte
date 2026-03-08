@@ -1,8 +1,15 @@
 <script lang="ts">
-	export let image: string;
-	export let description: string;
-	export let imageAlt: string;
-	export let href: string;
+	let {
+		image,
+		description,
+		imageAlt,
+		href,
+	}: {
+		image: string;
+		description: string;
+		imageAlt: string;
+		href: string;
+	} = $props();
 </script>
 
 <div class="relative z-10 text-center">
