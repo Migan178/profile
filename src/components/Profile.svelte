@@ -91,7 +91,7 @@
 			<a href="https://github.com/Migan178" target="_blank" class="mr-1">
 				<i class="bi bi-github"></i>
 			</a>
-			<a href="mailto:me@migan.co.kr" class="mr-1">
+			<a href="mailto:me@miganbox.com" class="mr-1">
 				<i class="bi bi-envelope-at-fill"></i>
 			</a>
 			<button on:click={copyDiscord} class="hover:cursor-pointer mr-1">
