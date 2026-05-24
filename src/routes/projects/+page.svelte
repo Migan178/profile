@@ -18,7 +18,7 @@
 			image={miganart}
 			imageAlt="미간라트"
 			description="Migan이 만든 간단한 만다라트 작성 앱이에요."
-			href="https://mandalart.migan.co.kr"
+			href="https://mandalart.miganbox.com"
 		/>
 	</div>
 </main>
