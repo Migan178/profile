@@ -4,7 +4,7 @@
 </script>
 
 <main>
-	<div class="md:flex max-md:mt-10">
+	<div class="max-md:mt-10 md:flex">
 		<Profile />
 		<Information />
 	</div>

@@ -25,15 +25,15 @@
 	}
 
 	body {
-		@apply bg-(--bg2-color) font-[Pretendard] text-[14px] flex flex-col;
+		@apply flex flex-col bg-(--bg2-color) font-[Pretendard] text-[14px];
 	}
 
 	main {
-		@apply h-screen grid justify-center items-center;
+		@apply grid h-screen items-center justify-center;
 	}
 
 	h1 {
-		@apply text-2xl text-(--text-color) font-bold;
+		@apply text-2xl font-bold text-(--text-color);
 	}
 
 	h2 {
@@ -61,7 +61,7 @@
 	}
 
 	::-webkit-scrollbar-thumb {
-		@apply bg-(--scroll-color) bg-clip-padding rounded-[10px] border-4 border-solid border-transparent;
+		@apply rounded-[10px] border-4 border-solid border-transparent bg-(--scroll-color) bg-clip-padding;
 	}
 
 	@media (min-width: 768px) {

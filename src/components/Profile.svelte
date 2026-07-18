@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from "$app/paths";
 	import myProfileBg from "$lib/images/myprofile-bg.png";
 	import { onMount } from "svelte";
 
@@ -74,7 +75,7 @@
 </script>
 
 <div class="text-center">
-	<a href="/your-lover" class="hover:cursor-default">
+	<a href={resolve("/your-lover")} class="hover:cursor-default">
 		<img
 			src={myProfileBg}
 			alt="Migan's profile/미간의 프로필"
@@ -88,22 +89,44 @@
 	</h2>
 	<ul class="list-none flex items-center justify-center">
 		<li class="px-7 pt-1 text-2xl">
-			<a href="https://github.com/Migan178" target="_blank" class="mr-1">
+			<a
+				href="https://github.com/Migan178"
+				target="_blank"
+				class="mr-1"
+				aria-label="To Gitub"
+			>
 				<i class="bi bi-github"></i>
 			</a>
-			<a href="mailto:me@miganbox.com" class="mr-1">
+			<a
+				href="mailto:me@miganbox.com"
+				class="mr-1"
+				aria-label="To send email"
+			>
 				<i class="bi bi-envelope-at-fill"></i>
 			</a>
-			<button on:click={copyDiscord} class="hover:cursor-pointer mr-1">
+			<button
+				on:click={copyDiscord}
+				class="hover:cursor-pointer mr-1"
+				aria-label="To copy Discord ID"
+			>
 				<i
 					class="bi bi-discord text-(--text-color) hover:text-(--hover-color) duration-250"
 					id="discord-button"
 				></i>
 			</button>
-			<a href="https://x.com/Migan178" target="_blank" class="mr-1">
+			<a
+				href="https://x.com/Migan178"
+				target="_blank"
+				class="mr-1"
+				aria-label="To X(Twitter)"
+			>
 				<i class="bi bi-twitter-x"></i>
 			</a>
-			<a href="https://www.instagram.com/migan.3meter" target="_blank">
+			<a
+				href="https://www.instagram.com/migan.3meter"
+				target="_blank"
+				aria-label="To Instagram"
+			>
 				<i class="bi bi-instagram"></i>
 			</a>
 		</li>
