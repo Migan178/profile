@@ -4,9 +4,9 @@
 	import Navbar from "../components/layouts/Navbar.svelte";
 </script>
 
-<head>
+<svelte:head>
 	<title>Migan</title>
-</head>
+</svelte:head>
 
 <Navbar />
 <slot />
