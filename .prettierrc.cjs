@@ -14,6 +14,13 @@ const config = {
 				parser: "svelte",
 			},
 		},
+		{
+			files: ".github/workflows/*.yml",
+			options: {
+				tabWidth: 2,
+				useTabs: false,
+			},
+		},
 	],
 };
 
