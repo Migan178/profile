@@ -2,11 +2,16 @@
 FROM node:24-alpine AS builder
 WORKDIR /app
 
-COPY package.json yarn.lock* ./
-RUN yarn install --frozen-lockfile
+ENV CI=true
+
+RUN npm install --global pnpm
+
+COPY package.json pnpm-lock.yaml* ./
+RUN pnpm install --frozen-lockfile
 
 COPY . .
-RUN yarn build
+RUN pnpm build
+RUN pnpm prune --prod
 
 # Runner
 FROM node:24-alpine AS runner

@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev --port 3000",
-		"dev:host": "yarn dev --host",
+		"dev:host": "pnpm dev --host",
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -15,7 +15,6 @@
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
 		"@migan/prettier-config": "^2.0.0",
-		"@sveltejs/adapter-auto": "^7.0.1",
 		"@sveltejs/adapter-node": "^5.5.7",
 		"@sveltejs/kit": "2.57.1",
 		"@sveltejs/vite-plugin-svelte": "^7.2.0",
@@ -39,5 +38,6 @@
 		"@tailwindcss/vite": "^4.0.1",
 		"bootstrap-icons": "^1.13.1",
 		"tailwindcss": "^4.0.1"
-	}
+	},
+	"packageManager": "pnpm@11.8.0"
 }
