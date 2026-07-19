@@ -59,7 +59,7 @@
 	id="nav"
 >
 	<nav class="flex items-center px-8 py-3 justify-between">
-		<a href={resolve("/")} on:click={closeMenuByProfile}>
+		<a href={resolve("/")} onclick={closeMenuByProfile}>
 			<img src={myProfile} alt="My profile" width="50" />
 		</a>
 		<ul class="md:flex list-none hidden">
@@ -86,7 +86,7 @@
 				<button
 					class="bg-(--bg-color) border-none"
 					type="button"
-					on:click={openOrCloseMenu}
+					onclick={openOrCloseMenu}
 					aria-label="To open or close Menu"
 				>
 					<i class="bi bi-list text-5xl text-(--text-color)"></i>
@@ -100,10 +100,10 @@
 	>
 		<ul>
 			<li class="ml-10 list-none mb-7 text-3xl">
-				<a href={resolve("/")} on:click={openOrCloseMenu}>홈</a>
+				<a href={resolve("/")} onclick={openOrCloseMenu}>홈</a>
 			</li>
 			<li class="ml-10 list-none mb-7 text-3xl">
-				<a href={resolve("/projects")} on:click={openOrCloseMenu}>
+				<a href={resolve("/projects")} onclick={openOrCloseMenu}>
 					프로젝트
 				</a>
 			</li>

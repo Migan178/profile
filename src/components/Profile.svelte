@@ -5,9 +5,8 @@
 
 	let clicked = false;
 
-	let iLoveHebi: number;
 	const birth = new Date("2010-01-31T00:00Z").getTime();
-	iLoveHebi = Date.now() - birth;
+	let iLoveHebi = $state(Date.now() - birth);
 
 	onMount(() => {
 		const interval = setInterval(() => {
@@ -105,7 +104,7 @@
 				<i class="bi bi-envelope-at-fill"></i>
 			</a>
 			<button
-				on:click={copyDiscord}
+				onclick={copyDiscord}
 				class="hover:cursor-pointer mr-1"
 				aria-label="To copy Discord ID"
 			>
