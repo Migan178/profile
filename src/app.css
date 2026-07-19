@@ -55,6 +55,13 @@
 	a:hover {
 		@apply text-(--hover-color) duration-250;
 	}
+	button > i {
+		@apply text-(--text-color) duration-250 hover:text-(--hover-color);
+	}
+
+	button {
+		@apply hover:cursor-pointer;
+	}
 
 	::-webkit-scrollbar {
 		@apply bg-(--bg2-color);

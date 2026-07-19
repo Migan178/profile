@@ -6,6 +6,7 @@
 const config = {
 	...require("@migan/prettier-config"),
 	plugins: ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
+	tailwindStylesheet: "./src/app.css",
 	overrides: [
 		{
 			files: "*.svelte",

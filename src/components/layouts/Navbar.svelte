@@ -55,14 +55,14 @@
 </script>
 
 <div
-	class="bg-(--bg-color) shadow-xl shadow-black/30 rounded-3xl duration-500 fixed left-4 right-4 bottom-4 z-20"
+	class="fixed right-4 bottom-4 left-4 z-20 rounded-3xl bg-(--bg-color) shadow-xl shadow-black/30 duration-500"
 	id="nav"
 >
-	<nav class="flex items-center px-8 py-3 justify-between">
+	<nav class="flex items-center justify-between px-8 py-3">
 		<a href={resolve("/")} onclick={closeMenuByProfile}>
 			<img src={myProfile} alt="My profile" width="50" />
 		</a>
-		<ul class="md:flex list-none hidden">
+		<ul class="hidden list-none md:flex">
 			<li class="px-8">
 				<a href={resolve("/")}>홈</a>
 			</li>
@@ -70,7 +70,7 @@
 				<a href={resolve("/projects")}>프로젝트</a>
 			</li>
 		</ul>
-		<ul class="md:flex list-none hidden pr-4">
+		<ul class="hidden list-none pr-4 md:flex">
 			<li>
 				<a
 					href="https://github.com/Migan178"
@@ -81,10 +81,10 @@
 				</a>
 			</li>
 		</ul>
-		<ul class="md:hidden block">
+		<ul class="block md:hidden">
 			<li>
 				<button
-					class="bg-(--bg-color) border-none"
+					class="border-none bg-(--bg-color)"
 					type="button"
 					onclick={openOrCloseMenu}
 					aria-label="To open or close Menu"
@@ -96,13 +96,13 @@
 	</nav>
 	<div
 		id="hamburger_open"
-		class="pt-5 pb-5 bg-(--bg-color) rounded-b-3xl opacity-0 fixed duration-500 max-w-full left-4 right-4 shadow-xl shadow-black/30 z-20"
+		class="fixed right-4 left-4 z-20 max-w-full rounded-b-3xl bg-(--bg-color) pt-5 pb-5 opacity-0 shadow-xl shadow-black/30 duration-500"
 	>
 		<ul>
-			<li class="ml-10 list-none mb-7 text-3xl">
+			<li class="mb-7 ml-10 list-none text-3xl">
 				<a href={resolve("/")} onclick={openOrCloseMenu}>홈</a>
 			</li>
-			<li class="ml-10 list-none mb-7 text-3xl">
+			<li class="mb-7 ml-10 list-none text-3xl">
 				<a href={resolve("/projects")} onclick={openOrCloseMenu}>
 					프로젝트
 				</a>

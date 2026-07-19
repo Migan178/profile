@@ -1,4 +1,4 @@
-<div class="mt-3 mx-5 text-xs md:text-lg pb-25">
+<div class="mx-5 mt-3 pb-25 text-xs md:text-lg">
 	<div>
 		<h2>소개</h2>
 		<h3>
