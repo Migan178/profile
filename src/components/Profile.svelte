@@ -3,6 +3,8 @@
 	import myProfileBg from "$lib/images/myprofile-bg.png";
 	import { onMount } from "svelte";
 
+	const discordId = "main.miganbox.com";
+
 	let isRealName = $state(false);
 	let showingDiscordId = $state(false);
 
@@ -31,7 +33,7 @@
 
 	function copyDiscord() {
 		const icon = document.getElementById("discord-button")!;
-		navigator.clipboard.writeText("migan.");
+		navigator.clipboard.writeText(discordId);
 		icon.classList.remove("bi-clipboard");
 		icon.classList.add("bi-clipboard-check");
 
@@ -112,7 +114,7 @@
 			<div
 				class={`absolute top-7 left-0 flex gap-x-1 rounded-4xl bg-(--bg-color) p-4 shadow-xl duration-250 ${showingDiscordId ? "opacity-100" : "pointer-events-none opacity-0"}`}
 			>
-				<p>migan.</p>
+				<p>{discordId}</p>
 				<button onclick={copyDiscord} aria-label="To copy Discord ID">
 					<i class="bi bi-clipboard" id="discord-button"></i>
 				</button>
