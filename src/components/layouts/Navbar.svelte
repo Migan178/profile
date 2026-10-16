@@ -1,5 +1,5 @@
 <script lang="ts">
-	import myProfile from "$lib/images/myprofile.png";
+	import myProfile from "#lib/images/myprofile.png";
 	import { resolve } from "$app/paths";
 
 	let clicked = false;
@@ -63,12 +63,8 @@
 			<img src={myProfile} alt="My profile" width="50" />
 		</a>
 		<ul class="hidden list-none md:flex">
-			<li class="px-8">
-				<a href={resolve("/")}>홈</a>
-			</li>
-			<li class="px-8">
-				<a href={resolve("/projects")}>프로젝트</a>
-			</li>
+			<li class="px-8"><a href={resolve("/")}>홈</a></li>
+			<li class="px-8"><a href={resolve("projects")}>프로젝트</a></li>
 		</ul>
 		<ul class="hidden list-none pr-4 md:flex">
 			<li>
@@ -102,10 +98,11 @@
 			<li class="mb-7 ml-10 list-none text-3xl">
 				<a href={resolve("/")} onclick={openOrCloseMenu}>홈</a>
 			</li>
+
 			<li class="mb-7 ml-10 list-none text-3xl">
-				<a href={resolve("/projects")} onclick={openOrCloseMenu}>
-					프로젝트
-				</a>
+				<a href={resolve("projects")} onclick={openOrCloseMenu}
+					>프로젝트</a
+				>
 			</li>
 		</ul>
 		<ul>

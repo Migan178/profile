@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from "$app/paths";
-	import myProfileBg from "$lib/images/myprofile-bg.png";
+	import myProfileBg from "#lib/images/myprofile-bg.png";
 	import { onMount } from "svelte";
 
 	const discordId = "main.miganbox.com";
@@ -77,7 +77,7 @@
 </script>
 
 <div class="text-center">
-	<a href={resolve("/your-lover")} class="hover:cursor-default">
+	<a href={resolve("your-lover")} class="hover:cursor-default">
 		<img
 			src={myProfileBg}
 			alt="Migan's profile/미간의 프로필"
@@ -85,7 +85,7 @@
 			width="150"
 		/>
 	</a>
-	<h1 class="mt-1 text-5xl" id="name">&#x200bMigan</h1>
+	<h1 class="mt-1 text-5xl" id="name">​Migan</h1>
 	<h2 class="mt-3 tabular-nums">
 		태어난지 {new Intl.NumberFormat().format(iLoveHebi)}ms
 	</h2>

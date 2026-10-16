@@ -1,6 +1,6 @@
 <script>
-	import noPicturePhoto from "$lib/images/nopicture.png";
-	import miganart from "$lib/images/miganart-gh.png";
+	import noPicturePhoto from "#lib/images/nopicture.png";
+	import miganart from "#lib/images/miganart-gh.png";
 	import Project from "../../components/Project.svelte";
 </script>
 
